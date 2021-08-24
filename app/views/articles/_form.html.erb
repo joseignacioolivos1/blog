@@ -15,6 +15,12 @@
      <!-- [...] -->
      <%= f.input :photo, as: :file %>
      <!-- [...] -->
+     <!-- app/views/articles/_form.html.erb -->
+     <%= simple_form_for(article) do |f| %>
+     <!-- [...] -->
+     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <!-- [...] -->
+<% end %>
   <% end %>
   <div class="field">
     <%= form.label :title %>

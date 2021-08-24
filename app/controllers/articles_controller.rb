@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :body, :photo)
   end
   # GET /articles/1 or /articles/1.json
+  def article_params
+    params.require(:article).permit(:title, :body, photos: [])
+  end
   def show
   end
 
